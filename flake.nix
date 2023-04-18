@@ -13,8 +13,8 @@
     packages = forEachSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      ex1-arm64 = pkgs.callPackage ./ex1/arm64 { inherit rev; };
-      ex1-i386 = pkgs.callPackage ./ex1/i386 { inherit rev; };
+      ex1-arm64 = pkgs.callPackage ./ex1/arm64 {inherit rev;};
+      ex1-i386 = pkgs.callPackage ./ex1/i386 {inherit rev;};
     });
 
     formatter = forEachSystem (system: nixpkgs.legacyPackages.${system}.alejandra);
