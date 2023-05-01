@@ -1,12 +1,8 @@
-{
-  pkgs ? import <nixpkgs> {},
-  rev ? "dirty",
-}: let
+{ pkgs ? import <nixpkgs> {} }: let
   pkgsAarch64 = pkgs.pkgsCross.aarch64-embedded;
 in
   pkgsAarch64.stdenv.mkDerivation {
-    pname = "syseg-ex1";
-    version = rev;
+    name = "syseg-ex1-arm64-c";
 
     src = ./.;
   }
