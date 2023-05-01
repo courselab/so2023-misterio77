@@ -3,6 +3,5 @@
 in
   pkgsi386.stdenv.mkDerivation {
     name = "syseg-ex1-i386-assembly";
-
     src = ./.;
   }

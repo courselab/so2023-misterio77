@@ -18,7 +18,7 @@ main.o: main.c
 # Phony rules
 
 run: kernel.elf
-	qemu-system-aarch64 -M virt -nographic -cpu cortex-a72 -kernel $<
+	./qemu.sh $<
 
 install: kernel.elf kernel.img
 	@mkdir -p $(out)

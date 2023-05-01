@@ -9,7 +9,7 @@ bootloader.o: bootloader.s
 	$(AS) --32 $< -o $@
 
 run: bootloader.bin
-	qemu-system-i386 -nographic -drive format=raw,file=$< -net none
+	./qemu.sh $<
 
 install: bootloader.bin
 	mkdir -p $(out)

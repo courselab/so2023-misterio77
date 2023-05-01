@@ -3,6 +3,5 @@
 in
   pkgsAarch64.stdenv.mkDerivation {
     name = "syseg-ex1-arm64-c";
-
     src = ./.;
   }
