@@ -2,8 +2,6 @@ out ?= ./outputs/out
 
 all: kernel.elf
 
-# Actual files
-
 kernel.img: kernel.elf
 	dd if=/dev/zero of=$@ bs=1024 count=1440
 	dd if=$< of=$@ seek=0 conv=notrunc
