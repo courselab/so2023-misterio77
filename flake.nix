@@ -11,7 +11,8 @@
   in rec {
     # nix build
     packages = forEachPkgs (pkgs: {
-      i386-hex = pkgs.callPackage ./ex1/i386-hex { };
+      # TODO
+      # i386-hex = pkgs.callPackage ./ex1/i386-hex { };
       i386-assembly = pkgs.callPackage ./ex1/i386-assembly { };
       arm64-c = pkgs.callPackage ./ex1/arm64-c { };
     });
